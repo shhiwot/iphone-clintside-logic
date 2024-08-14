@@ -1,40 +1,37 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import data from "../../headerData";
 import "./iphone.css";
+
 function Iphone() {
   const [product, setproducts] = useState([]);
+  const apiUrl = import.meta.env.VITE_API_URL; // Use environment variable
+
   useEffect(() => {
-    fetch("https://iphone-render.onrender.com/iPhone")
+    fetch(`${apiUrl}/iPhone`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setproducts(data.products);
       })
       .catch(() => console.log("Error: unable to fetch!!"));
-  }, []);
-  //for css only
+  }, [apiUrl]);
 
-  var order = 1;
+  let order = 1;
+
   return (
     <div>
-      <div className="main-titlewraper text-center top-50 pt-3">iphone</div>
+      <div className="main-titlewraper text-center top-50 pt-3">iPhone</div>
       <div className="descriptionWraper text-center">
         The best for the brightest.
       </div>
-      {product?.map((EachProduct, i) => {
-        var order1 = 1;
-        var order2 = 2;
-        if (order != 1) {
-          order1 = 2;
-          order2 = 1;
-          order++;
-        } else {
-          order--;
-        }
-        let productWrapper = (
+      {product.map((EachProduct, i) => {
+        const order1 = order === 1 ? 1 : 2;
+        const order2 = order === 1 ? 2 : 1;
+        order = order === 1 ? 2 : 1;
+
+        return (
           <div className="container-fluid" key={i}>
-            <div className="row justify-content-center text-center px-5 m-3 left ">
+            <div className="row justify-content-center text-center px-5 m-3 left">
               <div
                 className={`leftSideWrapper mt-5 col-sm-12 col-md-6 order-${order1}`}
               >
@@ -45,7 +42,7 @@ function Iphone() {
                   <div className="text text-center">
                     {EachProduct.product_brief_description}
                     <br />
-                    {`starting at ${EachProduct.starting_price}`}
+                    {`Starting at ${EachProduct.starting_price}`}
                     <br />
                     {EachProduct.price_range}
                   </div>
@@ -55,16 +52,19 @@ function Iphone() {
                 </div>
               </div>
               <div
-                className={`right-side-wrapper mt-0  col-sm-12 col-md-6 order-${order2}`}
+                className={`right-side-wrapper mt-0 col-sm-12 col-md-6 order-${order2}`}
               >
-                <img src={EachProduct.product_img} alt="product" />
+                <img
+                  src={EachProduct.product_img}
+                  alt={EachProduct.product_name}
+                />
               </div>
             </div>
           </div>
         );
-        return productWrapper;
       })}
     </div>
   );
 }
+
 export default Iphone;
