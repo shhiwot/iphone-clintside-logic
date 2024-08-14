@@ -1,0 +1,44 @@
+.first_section_wrapper{
+  position: relative;
+  background-image: url("../../../commonResource/images/home/hero_apple_watch_series_9__x5wo4ptz2giu_large.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 580px;
+}
+.content {
+  position: absolute;
+  top: 331px;
+  width: 100%;
+}
+.model_wrapper{
+  width: 30%;
+  margin: 0 auto;
+}
+.advert_wrapper,
+.discription_wrapper {
+  font-size: 18px;
+  width: 69%;
+  margin: auto;
+  color: #fff;
+}
+.content a {
+  text-decoration: none;
+  color: #1d1d1f;
+  border-radius: 25px;
+  background: #fff;
+  font-size: 15px;
+  padding: 7px 21px;
+  font-weight: 600;
+}
+
+.linkwrapper div {
+  width: auto;
+  padding-left: 2%;
+}
+.linkwrapper div a::after{
+  font-family: "FontAwesome";
+    font-weight: 900;
+    content: "\f105";
+    padding-left: 10px;
+}

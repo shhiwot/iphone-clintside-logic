@@ -1,0 +1,92 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: silver;
+}
+.main-titlewraper {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.left {
+  width: 80%;
+  margin: 0 20%;
+}
+.text {
+  font-size: 14px;
+  font-weight: bold;
+}
+.linksswrapper a {
+  font-size: 20px;
+}
+.titleWraper {
+  padding-top: 20%;
+  font-weight: bolder;
+  font-size: 47px;
+  line-height: 1.15em;
+  letter-spacing: -0.04em;
+}
+.descriptionWraper {
+  font-size: 30px;
+  font-weight: 500;
+}
+.title-wraper.bold {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.15em;
+  letter-spacing: -0.04em;
+}
+
+.linwrapper a:after {
+  font-family: "FontAwesome";
+  font-weight: bold;
+  content: "\f105";
+  padding-left: 10px;
+  font-size: 14px;
+}
+.leftSideWrapper {
+  padding-top: 7%;
+  height: 20%;
+}
+.outer_title_Wrapper {
+  margin-top: 5%;
+}
+.Imgwrapper {
+  margin-bottom: 5%;
+  margin-top: 10%;
+  width: 65%;
+  margin-left: 20%;
+}
+.right-side-wrapper {
+  width: 50%;
+}
+.right_Side_Wrrapper img {
+  width: 65%;
+}
+.left_Side_Wrrapper {
+  margin-top: 20%;
+  width: 20%;
+  font-size: 15px;
+  font-weight: 600;
+}
+.title_Wraper1 {
+  font-size: 35px;
+  font-weight: bold;
+}
+.title_Discription_Wraper {
+  font-size: 23px;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+/* @media (min-width: 768px) {
+  .Imgwrapper{
+    margin-top: 10%;
+  width: 65%;
+}
+.titleWraper {
+  padding-top: 20%;
+}
+.right-side-wrapper{
+ width: 50%; 
+}
+} */
