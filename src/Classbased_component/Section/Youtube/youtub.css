@@ -3,7 +3,7 @@ body{
  font-family: "FontAwesome";
 }
 .Externalvedio_wrapper{
- overflow: hidden;
+ overflow-x: hidden;
 }
 .DescriptionWrapper{
   width: 80%;
