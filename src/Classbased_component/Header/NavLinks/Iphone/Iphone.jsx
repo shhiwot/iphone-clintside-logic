@@ -7,7 +7,7 @@ function Iphone() {
   const apiUrl = import.meta.env.VITE_API_URL; // Use environment variable
 
   useEffect(() => {
-    fetch(`${apiUrl}/iPhone`)
+    fetch("https://iphone-render.onrender.com/iPhone")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

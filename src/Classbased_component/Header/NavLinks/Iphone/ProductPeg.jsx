@@ -9,7 +9,7 @@ export default function ProductPeg() {
   const apiUrl = import.meta.env.VITE_API_URL; // Use environment variable
 
   useEffect(() => {
-    fetch(`${apiUrl}/iphone`)
+    fetch("https://iphone-render.onrender.com/iphone")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
