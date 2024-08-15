@@ -16,7 +16,8 @@ export default function Youtube() {
   const [Youtubedata, setYoutubedata] = useState([]);
   useEffect(() => {
     fetch(
-        "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDyXH_nhx3jJViVzBrRNaf6-T54cFQwiBk&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date&maxResults=8"
+      "../../../../appledata.json"
+        // "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDyXH_nhx3jJViVzBrRNaf6-T54cFQwiBk&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date&maxResults=8"
     )
       .then((res) => res.json())
       .then((data) => {
